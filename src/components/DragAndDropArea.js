@@ -157,7 +157,7 @@ const DragAndDropArea = () => {
                       {section.name}
                       <div className="text-gray7 font-light flex items-center  flex gap-1 text-xl">
                         <PlusOutlined
-                          size={15}
+                          size={10}
                           onClick={() => setIsAddTaskModalVisible(true)}
                         />
 
@@ -270,7 +270,7 @@ const DragAndDropArea = () => {
         <div>
           <button
             type="button"
-            class="text-light-gray-purple  focus:none font-medium  text-lg   min-w-48 text-left flex flex-col items-center  justify-center my-2"
+            class="text-light-gray-purple  focus:none font-medium  text-lg   min-w-48 text-left flex flex-col items-center  justify-center my-4"
             onClick={() => setIsAddSectionModalVisible(true)}
           >
             + Add Section

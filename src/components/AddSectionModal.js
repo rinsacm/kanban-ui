@@ -55,7 +55,7 @@ const AddSectionModal = ({
   if (isVisible)
     return (
       <div className="fixed top-0 w-screen h-screen bg-light-gray-purple bg-opacity-10 left-0 flex">
-        <form className="m-auto   flex-col bg-white p-2 rounded-lg">
+        <form className="m-auto container    flex-col bg-white p-2 rounded-lg mx-2 ">
           <div
             className="text-right font-semibold text-gray2"
             onClick={() => onClose()}

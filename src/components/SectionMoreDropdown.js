@@ -58,7 +58,7 @@ const SectionMoreDropDown = ({ sections, setSections, sectionId }) => {
       }}
     >
       <div className="flex justify-end">
-        <MoreOutlined className="text-gray7 rotate-90" />
+        <MoreOutlined size={10} className="text-gray7 rotate-90" />
       </div>
     </Dropdown>
   );
