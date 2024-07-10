@@ -57,7 +57,6 @@ const DragAndDropArea = () => {
   const updateTaskIdsInSection = async (secid, newIds) => {
     await fetch(backend_url + `update-section/${secid}`, {
       method: "PUT",
-      credentials: "include",
       withcredentials: true,
       headers: {
         "Content-Type": "application/json",
