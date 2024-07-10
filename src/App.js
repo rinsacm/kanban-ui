@@ -18,11 +18,11 @@ function App() {
     setIsNavVisible(!isNavVisible);
   };
   return (
-    <div className="App flex font-inter  min-h-screen bg-white flex-col mx-auto my-auto scrollbar-hide::-webkit-scrollbar scrollbar-hide">
+    <div className="App flex font-inter  min-h-screen bg-white flex-col mx-auto my-auto scrollbar-hide::-webkit-scrollbar scrollbar-hide overflow-hidden">
       <div className="flex justify-between p-1 align-middle">
         <div className="h-full flex  items-center justify-center gap-1">
           <div className=" flex items-center justify-center ">
-            <Button className="w-auto w-9 h-9 aspect-square">
+            <Button className="w-9 h-9 aspect-square">
               <ArrowLeftOutlined size={5} />
             </Button>
           </div>
@@ -30,7 +30,7 @@ function App() {
           <div className=" flex items-center justify-center bg-dark-gray rounded-md h-9 w-9  ">
             <AppleFilled className=" text-white" />
           </div>
-          <div className="grid grid-cols-3 grid-rows-2">
+          <div className="grid grid-cols-2 grid-rows-2">
             <div className="col-span-2 row-span-2">
               <div className="text-left col-span-6 row-span-2 text-gray8 font-medium">
                 Apple
