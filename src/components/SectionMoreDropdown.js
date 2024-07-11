@@ -25,7 +25,6 @@ const SectionMoreDropDown = ({ sections, setSections, sectionId }) => {
     );
     fetch(backend_url + `sections/${sectionId}`, {
       method: "DELETE",
-      credentials: "include",
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",

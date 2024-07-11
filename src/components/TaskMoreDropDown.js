@@ -24,7 +24,6 @@ const TaskMoreDropDown = ({ setTasks, sections, setSections, taskId }) => {
     setTasks((prevState) => prevState.filter((data) => data._id !== taskId));
     fetch(backend_url + `tasks/${taskId}`, {
       method: "DELETE",
-      credentials: "include",
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +54,6 @@ const TaskMoreDropDown = ({ setTasks, sections, setSections, taskId }) => {
     console.log(sections);
     fetch(backend_url + `/tasks/${taskId}/delete-id-from-section`, {
       method: "POST",
-      credentials: "include",
       withCredentials: true,
       headers: {
         "Content-Type": "application/json",

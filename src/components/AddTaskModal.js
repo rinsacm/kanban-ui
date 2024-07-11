@@ -103,8 +103,7 @@ const AddTaskModal = ({
           }}
           labelAlign="left"
           wrapperCol={{
-            "aria-colcount": 1,
-            span: 15,
+            span: 14,
           }}
           colon={false}
           className="m-auto   flex-col bg-white p-4 rounded-lg"
@@ -157,6 +156,7 @@ const AddTaskModal = ({
           >
             <Input
               type="date"
+              className="w-full md:w-auto"
               value={taskDue}
               onChange={(e) => setTaskDue(e.target.value)}
               placeholder="date"
