@@ -1,6 +1,7 @@
 import { CloseOutlined } from "@ant-design/icons";
 import { Form, Select } from "antd";
 import Input from "antd/es/input/Input";
+import Modal from "antd/es/modal/Modal";
 import { useEffect, useState } from "react";
 
 const backend_url = process.env.REACT_APP_BACKEND_URL
@@ -95,7 +96,7 @@ const AddTaskModal = ({
   };
   if (isVisible)
     return (
-      <div className="fixed top-0 w-screen h-screen bg-light-gray-purple bg-opacity-10 left-0 flex">
+      <Modal open={isVisible} onOk={addTask} okText="Save" onCancel={onClose}>
         <Form
           name="wrap"
           labelCol={{
@@ -108,13 +109,6 @@ const AddTaskModal = ({
           colon={false}
           className="m-auto   flex-col bg-white p-4 rounded-lg"
         >
-          <div
-            className="text-right font-semibold text-gray2"
-            onClick={() => onClose()}
-          >
-            <CloseOutlined />
-          </div>
-
           <Form.Item
             label="TaskName"
             value={taskName}
@@ -195,16 +189,8 @@ const AddTaskModal = ({
               ]}
             />
           </Form.Item>
-
-          <button
-            type="submit"
-            onClick={addTask}
-            className="bg-blue p-2 rounded  text-white font-medium px-4"
-          >
-            Save
-          </button>
         </Form>
-      </div>
+      </Modal>
     );
 };
 export default AddTaskModal;

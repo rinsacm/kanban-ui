@@ -1,5 +1,6 @@
 import { CloseOutlined } from "@ant-design/icons";
 import { Input } from "antd";
+import Modal from "antd/es/modal/Modal";
 import { useEffect, useState } from "react";
 
 const backend_url = process.env.REACT_APP_BACKEND_URL
@@ -54,14 +55,13 @@ const AddSectionModal = ({
   };
   if (isVisible)
     return (
-      <div className="fixed top-0 w-screen h-screen bg-light-gray-purple bg-opacity-10 left-0 flex">
+      <Modal
+        open={isVisible}
+        okText="Save"
+        onOk={addSection}
+        onCancel={onClose}
+      >
         <form className="m-auto   flex-col bg-white p-2 rounded-lg ">
-          <div
-            className="text-right font-semibold text-gray2"
-            onClick={() => onClose()}
-          >
-            <CloseOutlined size={2} />
-          </div>
           <div className="grid grid-cols-2 my-2">
             <label className="text-left text-gray2 text-sm">Section Name</label>
             <Input
@@ -73,16 +73,8 @@ const AddSectionModal = ({
               className="focus:none border-gray3 border-2 rounded-lg placeholder-gray4"
             />
           </div>
-
-          <button
-            type="submit"
-            onClick={addSection}
-            className="bg-blue p-2 rounded  text-white font-medium px-4"
-          >
-            Save
-          </button>
         </form>
-      </div>
+      </Modal>
     );
 };
 export default AddSectionModal;
