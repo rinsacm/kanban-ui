@@ -155,9 +155,9 @@ const DragAndDropArea = () => {
                   >
                     <div className="text-gray8 font-medium text-lg text-left my-2 justify-between flex">
                       {section.name}
-                      <div className="text-gray7 font-light flex items-center  flex gap-1 text-xl">
+                      <div className="text-gray7 font-light flex items-center text-sm  gap-2 ">
                         <PlusOutlined
-                          size={10}
+                          size={6}
                           onClick={() => setIsAddTaskModalVisible(true)}
                         />
 
@@ -196,15 +196,16 @@ const DragAndDropArea = () => {
                                           {...provided.dragHandleProps}
                                           className="flex  bg-white rounded-lg m-2 p-2 flex-col text-left shadow-sm gap-2"
                                         >
-                                          <TaskMoreDropDown
-                                            setTasks={setTasks}
-                                            sections={sections}
-                                            setSections={setSections}
-                                            taskId={tsk._id}
-                                          />
-
-                                          <div className="font-normal text-sm  text-gray5 text-wrap break-words">
-                                            {tsk.desc}
+                                          <div className="flex justify-between">
+                                            <div className="font-normal text-sm  text-gray5 text-wrap break-words">
+                                              {tsk.desc}
+                                            </div>
+                                            <TaskMoreDropDown
+                                              setTasks={setTasks}
+                                              sections={sections}
+                                              setSections={setSections}
+                                              taskId={tsk._id}
+                                            />
                                           </div>
 
                                           <div className="flex  justify-between gap-4 ">
@@ -212,7 +213,7 @@ const DragAndDropArea = () => {
                                               <img
                                                 alt="person"
                                                 src="https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg"
-                                                className="rounded-full w-6 h-6"
+                                                className="rounded-full w-5 h-5"
                                               />
                                               <div
                                                 className={`font-medium w-fit align-middle text-nowrap text-xs ${
@@ -270,10 +271,14 @@ const DragAndDropArea = () => {
         <div>
           <button
             type="button"
-            class="text-light-gray-purple  focus:none font-medium  text-lg   min-w-48 text-left flex flex-col items-center  justify-center my-4"
+            class="text-light-gray-purple  focus:none font-medium  text-lg gap-2   min-w-48 text-left flex  items-center  justify-center my-4"
             onClick={() => setIsAddSectionModalVisible(true)}
           >
-            + Add Section
+            <PlusOutlined
+              size={10}
+              onClick={() => setIsAddTaskModalVisible(true)}
+            />
+            Add Section
           </button>
         </div>
       </div>

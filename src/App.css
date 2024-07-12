@@ -92,3 +92,11 @@ body {
 .border1 {
   border-width: 0.001px;
 }
+
+.ant-btn {
+  border-color: #f2f2f4;
+  border-width: 1px;
+}
+.ant-input-outlined {
+  border-color: #f2f2f4;
+}

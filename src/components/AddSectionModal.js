@@ -1,5 +1,5 @@
 import { CloseOutlined } from "@ant-design/icons";
-import { Input } from "antd";
+import { Form, Input } from "antd";
 import Modal from "antd/es/modal/Modal";
 import { useEffect, useState } from "react";
 
@@ -61,19 +61,18 @@ const AddSectionModal = ({
         onOk={addSection}
         onCancel={onClose}
       >
-        <form className="m-auto   flex-col bg-white p-2 rounded-lg ">
-          <div className="grid grid-cols-2 my-2">
-            <label className="text-left text-gray2 text-sm">Section Name</label>
-            <Input
-              value={taskSection}
-              onChange={(e) => {
-                setTaskSection(e.target.value);
-              }}
-              type="text"
-              className="focus:none border-gray3 border-2 rounded-lg placeholder-gray4"
-            />
-          </div>
-        </form>
+        <div className=" flex flex-row w-full justify-center gap-2 pt-8">
+          <label className="flex flex-col items-center">Section Name :</label>
+          <Input
+            value={taskSection}
+            onChange={(e) => {
+              setTaskSection(e.target.value);
+            }}
+            type="text"
+            className="w-fit"
+            placeholder="Task Name"
+          />
+        </div>
       </Modal>
     );
 };
