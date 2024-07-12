@@ -168,7 +168,7 @@ const DragAndDropArea = () => {
                         />
                       </div>
                     </div>
-                    <div className="bg-gray1 overflow-scroll scrollbar-hide font-light rounded-2xl p-1 h-full m-2 ">
+                    <div className="bg-gray1 overflow-scroll scrollbar-hide font-light rounded-2xl p-1 h-full  ">
                       <div>
                         {section.taskIds &&
                           section.taskIds.length > 0 &&
