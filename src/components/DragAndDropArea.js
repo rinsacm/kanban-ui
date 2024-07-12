@@ -137,8 +137,8 @@ const DragAndDropArea = () => {
   };
 
   return (
-    <div className="mx-auto flex flex-row w-screen  h-full overflow-auto scrollbar-hide items-start">
-      <div className=" flex p-3   flex-row  w-full ">
+    <div className=" flex flex-row w-screen  h-screen  overflow-auto scrollbar-hide items-start ">
+      <div className=" flex p-3   flex-row  w-full  h-5/6">
         <DragDropContext onDragEnd={onDragEnd}>
           {sections.map((section) => {
             return (
@@ -149,7 +149,7 @@ const DragAndDropArea = () => {
               >
                 {(provided) => (
                   <div
-                    className=" flex-col m-2 border-solid border-gray-100 min-w-48"
+                    className=" flex-col m-2 border-solid border-gray-100 min-w-72 h-full pb-2"
                     {...provided.droppableProps}
                     ref={provided.innerRef}
                   >
@@ -168,7 +168,7 @@ const DragAndDropArea = () => {
                         />
                       </div>
                     </div>
-                    <div className="bg-gray1  font-light rounded-lg py-1 ">
+                    <div className="bg-gray1 overflow-scroll scrollbar-hide font-light rounded-2xl p-1 h-full m-2 ">
                       <div>
                         {section.taskIds &&
                           section.taskIds.length > 0 &&
@@ -194,7 +194,7 @@ const DragAndDropArea = () => {
                                           ref={provided.innerRef}
                                           {...provided.draggableProps}
                                           {...provided.dragHandleProps}
-                                          className="flex  bg-white rounded-lg m-2 p-2 flex-col text-left shadow-sm gap-2"
+                                          className="flex  bg-white rounded-xl m-2 p-2 flex-col text-left shadow-sm gap-2"
                                         >
                                           <div className="flex justify-between">
                                             <div className="font-normal text-sm  text-gray5 text-wrap break-words">
@@ -225,7 +225,7 @@ const DragAndDropArea = () => {
                                                 {getFormattedDueDate(tsk.due)}
                                               </div>
                                             </div>
-                                            <div className="bg-gray6 p-1 text-xs rounded-md text-gray7 text-wrap flex break-words">
+                                            <div className="bg-gray6 py-1 px-2 text-xs rounded-lg text-gray7 text-wrap flex break-words">
                                               {tsk.name}
                                             </div>
                                           </div>

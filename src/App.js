@@ -19,8 +19,8 @@ function App() {
     setIsNavVisible(!isNavVisible);
   };
   return (
-    <div className="App flex font-inter  min-h-screen bg-white flex-col mx-auto my-auto scrollbar-hide::-webkit-scrollbar scrollbar-hide overflow-hidden">
-      <div className="flex justify-between p-1 align-middle">
+    <div className="App  flex font-inter  h-full bg-white flex-col  my-auto scrollbar-hide::-webkit-scrollbar scrollbar-hide overflow-hidden">
+      <div className="flex justify-between p-1 align-middle w-screen">
         <div className="h-full flex  items-center justify-center gap-1 md:gap-3 ">
           <div className=" flex items-center justify-center ">
             <Button className="w-9 h-9 aspect-square">
