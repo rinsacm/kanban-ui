@@ -107,7 +107,7 @@ const AddTaskModal = ({
             span: 14,
           }}
           colon={false}
-          className="m-auto   flex-col bg-white p-8 rounded-lg"
+          className="m-auto   flex-col bg-white py-8 p-4 rounded-lg"
         >
           <Form.Item
             label="Task Name"

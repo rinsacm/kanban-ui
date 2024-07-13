@@ -5,8 +5,8 @@ const ShareIcon = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    width="24"
-    height="24"
+    width="inherit"
+    height="inherit"
     viewBox="0 0 24 24"
     fill="currentColor" // Use currentColor to allow color inheritance
     {...props}

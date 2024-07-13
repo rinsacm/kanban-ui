@@ -52,10 +52,9 @@ function App() {
             />
           </div>
           <div>
-            <Button
-              className="text-gray4 "
-              icon={<ShareIcon />} // Ensure the icon color inherits from the button
-            ></Button>
+            <Button className="text-gray4 w-full p-2">
+              <ShareIcon />
+            </Button>{" "}
           </div>
           <div>
             <Button>
@@ -63,7 +62,7 @@ function App() {
             </Button>
           </div>
         </div>
-        <div className="flex md:hidden fixed top-0 right-0 p-1 justify-end  bg-white">
+        <div className="flex md:hidden  top-0 right-0 p-1 justify-end  bg-white">
           <div className=" ">
             <MenuOutlined
               onClick={handleNavClick}
@@ -82,10 +81,12 @@ function App() {
                 />
               </div>
               <div>
-                <LogoutOutlined className="w-full justify-center" />
+                <Button className="text-gray4 w-full p-2">
+                  <ShareIcon />
+                </Button>{" "}
               </div>
               <div>
-                <SettingFilled className="w-full justify-center" />
+                <SettingFilled className="w-full justify-center text-gray4" />
               </div>
             </div>
           </div>
