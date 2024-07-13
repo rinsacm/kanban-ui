@@ -241,7 +241,7 @@ const DragAndDropArea = () => {
                       <div>
                         <button
                           type="button"
-                          class="text-light-gray-purple  focus:none font-medium  text-sm px-5 py-2.5 me-2 mb-2 "
+                          class="text-light-gray-purple  focus:none font-medium  flex-col justify-center items-center h-16  text-sm px-5 py-2.5 me-2 mb-2 "
                           onClick={() => setIsAddTaskModalVisible(true)}
                         >
                           + Add Task

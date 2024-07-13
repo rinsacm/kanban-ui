@@ -8,11 +8,7 @@ const backend_url = process.env.REACT_APP_BACKEND_URL
 const items = [
   {
     key: "1",
-    label: "1st option",
-  },
-  {
-    key: "2",
-    label: <div>delete</div>,
+    label: <div>Delete</div>,
   },
 ];
 const SectionMoreDropDown = ({ sections, setSections, sectionId }) => {
@@ -45,7 +41,7 @@ const SectionMoreDropDown = ({ sections, setSections, sectionId }) => {
   };
 
   const handleOnClick = (e, sectionId) => {
-    if (e.key == "2") {
+    if (e.key == "1") {
       onDeleteSection(sectionId);
     }
   };

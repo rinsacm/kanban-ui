@@ -12,6 +12,7 @@ import {
 } from "@ant-design/icons";
 import { Button } from "antd";
 import { useState } from "react";
+import ShareIcon from "./customIcons/ShareIcon";
 
 function App() {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -20,7 +21,7 @@ function App() {
   };
   return (
     <div className="App  flex font-inter  h-full bg-white flex-col  my-auto scrollbar-hide::-webkit-scrollbar scrollbar-hide overflow-hidden">
-      <div className="flex justify-between p-1 align-middle w-screen">
+      <div className="flex justify-between p-4 align-middle w-screen">
         <div className="h-full flex  items-center justify-center gap-1 md:gap-3 ">
           <div className=" flex items-center justify-center ">
             <Button className="w-9 h-9 aspect-square">
@@ -50,10 +51,11 @@ function App() {
               prefix={<SearchOutlined className="text-gray4" />}
             />
           </div>
-          <div className="">
-            <Button className="text-gray4">
-              <LogoutOutlined />
-            </Button>
+          <div>
+            <Button
+              className="text-gray4 "
+              icon={<ShareIcon />} // Ensure the icon color inherits from the button
+            ></Button>
           </div>
           <div>
             <Button>

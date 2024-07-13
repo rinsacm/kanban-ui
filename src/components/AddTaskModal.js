@@ -107,10 +107,10 @@ const AddTaskModal = ({
             span: 14,
           }}
           colon={false}
-          className="m-auto   flex-col bg-white p-4 rounded-lg"
+          className="m-auto   flex-col bg-white p-8 rounded-lg"
         >
           <Form.Item
-            label="TaskName"
+            label="Task Name"
             value={taskName}
             onChange={(e) => {
               setTaskName(e.target.value);
